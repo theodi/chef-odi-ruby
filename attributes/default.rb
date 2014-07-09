@@ -1,21 +1,21 @@
 node.default['odi-ruby']['users'] = {
-  'vagrant' => '2.1.2'
+  'vagrant' => ['2.1.2']
 }
 
 node.default['rbenv']['user_installs'] = []
 
-node.default['odi-ruby']['users'].each_pair do |user, ruby|
+node.default['odi-ruby']['users'].each_pair do |user, rubies|
+
+  gems = {}
+  rubies.each do |ruby|
+    gems[ruby] = [{'name' => 'bundler'}]
+  end
+
   node.default['rbenv']['user_installs'] << {
     'user'    => user,
-    'rubies'  => [
-      ruby
-    ],
-    'global'  => ruby,
-    'gems'    => {
-      ruby => [
-        'name' => 'bundler'
-      ]
-    },
+    'rubies'  => rubies,
+    'global'  => rubies[0],
+    'gems'    => gems,
     'plugins' => [
       {
         'name'    => 'rbenv-bundler',
