@@ -5,6 +5,11 @@ node.default['rbenv']['user_installs'] = [
       '2.1.2'
     ],
     'global'  => '2.1.2',
+    'gems'    => {
+      '2.1.2' => [
+        'name' => 'bundler'
+      ]
+    },
     'plugins' => [
       {
         'name'    => 'rbenv-bundler',
