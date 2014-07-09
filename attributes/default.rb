@@ -1,6 +1,4 @@
-node.default['odi-ruby']['users'] = {
-  'vagrant' => ['2.1.2']
-}
+node.default['odi-ruby']['users'] = {}
 
 node.default['rbenv']['user_installs'] = []
 
