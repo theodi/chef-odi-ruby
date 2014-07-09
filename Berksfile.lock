@@ -1,0 +1,38 @@
+DEPENDENCIES
+  odi-ruby
+    path: .
+    metadata: true
+  rbenv
+    git: git://github.com/fnichol/chef-rbenv.git
+    revision: 0a3018634bafe58ad21c6ee271af015220e444b9
+
+GRAPH
+  apt (2.4.0)
+  build-essential (2.0.4)
+  chef_handler (1.1.6)
+  dmg (2.2.0)
+  git (4.0.2)
+    build-essential (>= 0.0.0)
+    dmg (>= 0.0.0)
+    runit (>= 1.0.0)
+    windows (>= 0.0.0)
+    yum (~> 3.0)
+    yum-epel (>= 0.0.0)
+  java (1.22.0)
+  odi-ruby (0.1.0)
+    rbenv (>= 0.0.0)
+    ruby_build (>= 0.0.0)
+  ohai (2.0.1)
+  rbenv (0.7.3)
+    java (> 1.4.0)
+    ruby_build (>= 0.0.0)
+  ruby_build (0.8.0)
+  runit (1.5.10)
+    build-essential (>= 0.0.0)
+    yum (~> 3.0)
+    yum-epel (>= 0.0.0)
+  windows (1.31.0)
+    chef_handler (>= 0.0.0)
+  yum (3.2.2)
+  yum-epel (0.3.6)
+    yum (~> 3.0)
