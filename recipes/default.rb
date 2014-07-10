@@ -23,6 +23,7 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
+
 node.default['rbenv']['user_installs'] ||= []
 
 node['odi-ruby']['users'].each_pair do |user, rubies|
