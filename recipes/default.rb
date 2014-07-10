@@ -24,5 +24,25 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 
+node['odi-ruby']['users'].each_pair do |user, rubies|
+  gems = {}
+  rubies.each do |ruby|
+    gems[ruby] = [{'name' => 'bundler'}]
+  end
+
+  node.default['rbenv']['user_installs'] << {
+    'user'    => user,
+    'rubies'  => rubies,
+    'global'  => rubies[0],
+    'gems'    => gems,
+    'plugins' => [
+      {
+        'name'    => 'rbenv-bundler',
+        'git_url' => 'https://github.com/carsomyr/rbenv-bundler.git'
+      }
+    ]
+  }
+end
+
 include_recipe "ruby_build"
 include_recipe "rbenv::user"

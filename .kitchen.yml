@@ -10,17 +10,12 @@ platforms:
 
 suites:
   - name: odi-ruby
-    run_list: ["recipe[git]", "recipe[odi-ruby]"]
-    attributes: {
-      'odi-ruby' => {
-        'users' => {
-          'vagrant' => [
-            '2.1.2',
-            '2.1.0',
-            '2.0.0-p481',
-            '1.9.3-p547'
-          ]
-        }
-      }
-    }
+    run_list:
+    - "recipe[odi-ruby]"
+    attributes:
+      odi-ruby:
+        users:
+          vagrant:
+          - '2.1.2'
+          - '1.9.3-p547'
     data_bags_path: test/data_bags
