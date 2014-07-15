@@ -41,6 +41,10 @@ node['odi-ruby']['users'].each_pair do |user, rubies|
       {
         'name'    => 'rbenv-bundler',
         'git_url' => 'https://github.com/carsomyr/rbenv-bundler.git'
+      },
+      {
+        'name'    => 'rbenv-aliases',
+        'git_url' => 'git://github.com/tpope/rbenv-aliases.git'
       }
     ]
   }
