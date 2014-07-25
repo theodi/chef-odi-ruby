@@ -21,7 +21,7 @@ suites:
     attributes:
       odi-ruby:
         users:
-          vagrant:
+          root:
           - '2.1.2'
           - '1.9.3-p547'
     data_bags_path: test/data_bags
