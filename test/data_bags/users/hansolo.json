@@ -1,0 +1,6 @@
+{
+  "id"        : "hansolo",
+  "comment"   : "Han Solo",
+  "home"      : "/home/hansolo",
+  "groups"    : ["staff"]
+}

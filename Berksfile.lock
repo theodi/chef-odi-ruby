@@ -5,6 +5,7 @@ DEPENDENCIES
   rbenv
     git: git://github.com/fnichol/chef-rbenv.git
     revision: 0a3018634bafe58ad21c6ee271af015220e444b9
+  user
 
 GRAPH
   apt (2.4.0)
@@ -32,6 +33,7 @@ GRAPH
     build-essential (>= 0.0.0)
     yum (~> 3.0)
     yum-epel (>= 0.0.0)
+  user (0.3.0)
   windows (1.31.0)
     chef_handler (>= 0.0.0)
   yum (3.2.2)

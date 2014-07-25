@@ -17,11 +17,14 @@ platforms:
 suites:
   - name: odi-ruby
     run_list:
+    - "recipe[user::data_bag]"
     - "recipe[odi-ruby]"
     attributes:
+      users:
+      - hansolo
       odi-ruby:
         users:
-          root:
+          hansolo:
           - '2.1.2'
           - '1.9.3-p547'
     data_bags_path: test/data_bags
