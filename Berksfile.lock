@@ -20,7 +20,7 @@ GRAPH
     yum (~> 3.0)
     yum-epel (>= 0.0.0)
   java (1.22.0)
-  odi-ruby (0.1.0)
+  odi-ruby (0.1.1)
     apt (>= 0.0.0)
     rbenv (>= 0.0.0)
     ruby_build (>= 0.0.0)
