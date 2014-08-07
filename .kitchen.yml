@@ -20,5 +20,5 @@ suites:
         users:
           hansolo:
           - '2.1.2'
-          - '1.9.3-p547'
+#          - '1.9.3-p547'
     data_bags_path: test/data_bags

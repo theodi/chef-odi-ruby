@@ -28,13 +28,16 @@ include_recipe "apt"
 
 node.default['rbenv']['user_installs'] ||= []
 
+list = []
+
 node['odi-ruby']['users'].each_pair do |user, rubies|
   gems = {}
   rubies.each do |ruby|
     gems[ruby] = [{'name' => 'bundler'}]
   end
 
-  node.default['rbenv']['user_installs'] << {
+#  node.default['rbenv']['user_installs'] << {
+  list << {
     'user'    => user,
     'rubies'  => rubies,
     'global'  => rubies[0],
@@ -51,6 +54,8 @@ node['odi-ruby']['users'].each_pair do |user, rubies|
     ]
   }
 end
+
+node.default['rbenv']['user_installs'] = list
 
 include_recipe "ruby_build"
 include_recipe "rbenv::user"
