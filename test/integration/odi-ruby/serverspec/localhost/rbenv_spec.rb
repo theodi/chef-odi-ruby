@@ -14,12 +14,12 @@ end
 
 # Check we pick up ruby versions correctly
 describe command('su - hansolo -c "rm -rf bundletest; git clone https://github.com/theodi/bundletest.git bundletest; cd bundletest/onepointninepointthree; ~/.rbenv/shims/ruby -v"') do
-  it { should return_stdout /1.9.3/ }
+#  it { should return_stdout /1.9.3/ }
 end
 
 # And can bundle
 describe command('su - hansolo -c "rm -rf bundletest; git clone https://github.com/theodi/bundletest.git bundletest; cd bundletest/onepointninepointthree; ~/.rbenv/shims/bundle"') do
-  it { should return_exit_status 0 }
+#  it { should return_exit_status 0 }
 end
 
 # And for 2.1.2
