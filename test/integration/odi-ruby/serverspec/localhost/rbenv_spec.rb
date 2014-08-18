@@ -9,7 +9,7 @@ describe command('su - hansolo -c "~/.rbenv/shims/ruby -v"') do
 end
 
 describe command('su - hansolo -c "~/.rbenv/shims/bundle -v"') do
-  it { should return_stdout /Bundler version 1.6.\d/ }
+  it { should return_stdout /Bundler version/ }
 end
 
 # Check we pick up ruby versions correctly
